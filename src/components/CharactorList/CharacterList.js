@@ -1,11 +1,19 @@
-import React from 'react'
-import "./CharacterList.css"
+import React, { useState } from "react";
+import "./CharacterList.css";
 import data from "../../data/data.json";
+import Modal from "../Modals/CharacterDetailmodal";
+
 
 const CharacterList = () => {
+  const [showModal, setShowModal] = useState(false);
 
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
 
-
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   return (
     <div className="home-container">
@@ -65,7 +73,7 @@ const CharacterList = () => {
       <div className="characters-list">
         <div className="table-container">
           <table>
-            <thead >
+            <thead>
               <tr>
                 <th>Id</th>
                 <th>Name</th>
@@ -75,15 +83,14 @@ const CharacterList = () => {
               </tr>
             </thead>
             <tbody>
-              {data.map((character)=>(
-                <tr key={character.id}> 
-            
+              {data.map((character) => (
+                <tr key={character.id}>
                   <td>{character.id}</td>
                   <td>{character.name}</td>
                   <td>{character.race}</td>
                   <td>{character.gender}</td>
                   <td>
-                    <a href='.'>Details &gt;&gt;</a>
+                    <button onClick={handleOpenModal} className="details-btn">Details &gt;&gt;</button>
                   </td>
                 </tr>
               ))}
@@ -91,8 +98,41 @@ const CharacterList = () => {
           </table>
         </div>
       </div>
+
+
+        <Modal show={showModal} handleClose={handleCloseModal}>
+          <header className="modal-header">Characters &gt;</header>
+          <section className="modal-body">
+           <table className="modal-table">
+           <thead>
+             <th>
+              <tr>
+                Name
+              </tr>
+              <tr>
+                WikiURL
+              </tr>
+              <tr>Race</tr>
+              <tr>Gender</tr>
+              <tr>Height</tr>
+              <tr>Hair</tr>
+              <tr>Realm</tr>
+              <tr>Birth</tr>
+              <tr>Spouse</tr>
+              <tr>Death</tr>
+
+             </th>
+           </thead>
+           
+
+           </table>
+
+          </section>
+        </Modal>
+     
+
     </div>
   );
-}
+};
 
-export default CharacterList
+export default CharacterList;

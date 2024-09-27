@@ -132,3 +132,29 @@ th {
 
 
   
+/* Modal-css */
+
+.modal-header{
+    width: 100%;
+    box-sizing:border-box;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 0;
+    border-radius: 8px;
+}
+
+
+
+.modal-table{
+    line-height: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: auto;
+}
+
+.modal-table thead th tr{
+    font-size: 12px;
+    font-weight: 400;
+    text-align: justify;
+}
