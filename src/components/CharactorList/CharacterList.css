@@ -1,0 +1,134 @@
+    body{
+        margin: 0;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    .tool-container{
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+    .head-container{
+        border: 1px solid black;
+        width: 100%;
+        height: 70px;
+        margin: 0;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+
+    .search-sort{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .search-box{
+        display: flex;
+    }
+
+    .search-box .input-box{
+        min-width: 700px;
+        margin-top: 20px;
+        height: 30px;
+        margin: 20px;
+        background-color: rgb(254, 250, 250);
+        border-radius: 6px;
+        border: 0.1px solid black;
+    }
+
+    .search-box .input-box:active{
+        background-color: rgb(166, 164, 164);
+        border: none
+    }
+
+    .search-box p{
+        position: relative;
+        top: 7px;
+        font-size: 19px;
+    }
+
+    .sort-box{
+        display: flex;
+    }
+
+    .sort-box .sort-drop-down{
+        width: 200px;
+        height: 30px;
+        margin: 20px;
+    }
+
+    .sort-box p{
+        font-size: 19px;
+        position: relative;
+        top: 5px;
+    }
+
+    .race-gender-btn{
+        display: flex;
+        justify-content: space-around;
+    
+    }
+
+    .race-box{
+        display: flex;
+    }
+
+    .race-box p{
+        position: relative;
+        top: 3px;
+        font-size: 19px;
+    }
+
+
+    .race-select{
+        width: 200px;
+        height: 30px;
+        margin: 20px;
+    }
+
+    .gender-box{
+        display:flex ;
+    }
+
+    .gender-box {
+        position: relative;
+            top: 3px;
+            font-size: 19px;
+    }
+
+    .gender-select{
+        width: 200px;
+            height: 30px;
+            margin: 20px;
+    }
+
+    .submit-btn{
+        width:90px;
+        height: 30px;
+        position: relative;
+        top:23px;
+        background-color: rgb(192, 188, 188);
+        border: 0.1px solid black;
+        border-radius: 8px;
+    }
+
+
+    /* character lists */
+    /* table */
+
+table {
+    width: 100%;
+    line-height: 50px;
+}
+
+td,
+th {
+    text-align: center;
+}
+
+
+  
